@@ -98,7 +98,7 @@ func (bh *blockHeader) Unmarshal(src []byte) ([]byte, error) {
 
 	// Unmarshal itemsBlockOffset
 	if len(src) < 8 {
-		return src, fmt.Errorf("cannot unmarshal itemsBlockOffset from %d bytes; neet at least %d bytes", len(src), 8)
+		return src, fmt.Errorf("cannot unmarshal itemsBlockOffset from %d bytes; need at least %d bytes", len(src), 8)
 	}
 	bh.itemsBlockOffset = encoding.UnmarshalUint64(src)
 	src = src[8:]
